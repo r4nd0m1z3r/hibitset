@@ -110,7 +110,7 @@ impl<T: UnsignedInteger> GenericBitSet<T> {
     }
 
     #[inline(never)]
-    fn extend(&mut self, id: Index) {
+    pub fn extend(&mut self, id: Index) {
         Self::valid_range(id);
         let (p0, p1, p2) = offsets::<T>(id);
 
